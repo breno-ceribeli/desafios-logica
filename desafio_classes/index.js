@@ -1,31 +1,32 @@
 const prompt = require('prompt-sync')({sigint: true});
 
-class hero{
-    constructor(name, age, type){
-        this.name = name
-        this.age = age
-        this.type = type
+class hero {
+    constructor(name, age, type) {
+      this.name = name;
+      this.age = age;
+      this.type = type;
     }
-
-    attack(){
-        let attackType
-
-        if(this.type == "mago"){
-            attackType = "magia"
-        }
-        else if(this.type == "guerreiro"){
-            attackType = "espada"
-        }
-        else if(this.type == "monge"){
-            attackType = "artes marciais"
-        }
-        else{
-            attackType = "shuriken"
-        }
-
-        console.log(`O ${this.type} atacou usando ${attackType}.`)
+  
+    attack() {
+      let attackType;
+  
+      switch (this.type) {
+        case "mago":
+          attackType = "magia";
+          break;
+        case "guerreiro":
+          attackType = "espada";
+          break;
+        case "monge":
+          attackType = "artes marciais";
+          break;
+        default:
+          attackType = "shuriken";
+      }
+  
+      console.log(`O ${this.type} atacou usando ${attackType}.`);
     }
-}
+  }
 
 let firstHero
 let secondHero
