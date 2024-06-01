@@ -36,8 +36,8 @@ for(let i = 1; i <= 2; i ++){
   let heroAge = Number(prompt(`Escreva a idade do ${i}º herói: `))
   let heroType
   do{
-      console.log("Classes disponíveis: Mago, Guerreiro, Monge e Ninja.")
-      heroType = (prompt(`Escreva a classe da qual o ${i}º herói pertence: `)).toLowerCase()
+    console.log("Classes disponíveis: Mago, Guerreiro, Monge e Ninja.")
+    heroType = (prompt(`Escreva a classe da qual o ${i}º herói pertence: `)).toLowerCase()
   } while(heroType != "mago" && heroType != "guerreiro" && heroType != "monge" && heroType != "ninja")
 
   if(i == 1){
